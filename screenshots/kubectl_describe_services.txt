@@ -1,0 +1,74 @@
+$ kubectl describe services
+Name:              udagram-api-feed
+Namespace:         default
+Labels:            app=udagram-api-feed
+Annotations:       kubectl.kubernetes.io/last-applied-configuration:
+                     {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"feed-node"},"name":"udagram-api-feed","namespace":"default"...
+Selector:          app=feed-node
+Type:              ClusterIP
+IP:                10.100.150.30
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.0.112:8080,172.31.27.240:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP:                10.100.0.1
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         172.31.20.32:443,172.31.8.234:443
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              reverseproxy
+Namespace:         default
+Labels:            app=reverseproxy
+Annotations:       kubectl.kubernetes.io/last-applied-configuration:
+                     {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"reverseproxy"},"name":"reverseproxysvc","namespace":"...
+Selector:          app=reverseproxy
+Type:              ClusterIP
+IP:                10.100.240.58
+Port:              8080  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.70.223:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udagram-frontend
+Namespace:         default
+Labels:            app=udagram-frontend
+Annotations:       kubectl.kubernetes.io/last-applied-configuration:
+                     {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"udagram-frontend"},"name":"udagram-frontend","namesp...
+Selector:          app=udagram-frontend
+Type:              ClusterIP
+IP:                10.100.161.129
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.29.12:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udagram-api-user
+Namespace:         default
+Labels:            app=udagram-api-user
+Annotations:       kubectl.kubernetes.io/last-applied-configuration:
+                     {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"udagram-api-user"},"name":"udagram-api-user","namespace":"default"...
+Selector:          app=udagram-api-user
+Type:              ClusterIP
+IP:                10.100.2.88
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.35.131:8080,172.31.9.237:8080
+Session Affinity:  None
+Events:            <none>
